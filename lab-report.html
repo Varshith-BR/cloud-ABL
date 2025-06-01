@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab Report</title>
+  <style>
+    body { font-family: Tahoma; margin: 30px; }
+    h2 { color: darkblue; }
+    form { background: #eef; padding: 20px; border-radius: 6px; }
+    label, input, select { display: block; margin-top: 10px; width: 100%; }
+    button { margin-top: 15px; background: darkblue; color: white; padding: 10px; border: none; }
+  </style>
+</head>
+<body>
+  <h2>Upload Lab Report</h2>
+  <nav>
+         <a href="index.html">Dashboard</a>
+    <a href="emergency-form.html">Emergency</a>
+    <a href="blood-donate.html">Blood Donation</a>
+    <a href="organ-donate.html">Organ Donation</a>
+    <a href="pharmacy.html">Pharmacy</a>
+    <a href="lab-report.html">Lab Reports</a>
+        </nav>
+      </div>
+  <form>
+    <label>Patient Name:</label>
+    <input type="text" required>
+    <label>Report Type:</label>
+    <select>
+      <option>Blood Test</option>
+      <option>X-Ray</option>
+      <option>CT Scan</option>
+      <option>MRI</option>
+    </select>
+    <label>Upload File:</label>
+    <input type="file" accept=".pdf,.jpg,.png">
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>

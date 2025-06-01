@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Organ Donation</title>
+  <style>
+    body { font-family: Verdana; margin: 30px; }
+    h2 { color: green; }
+    form { padding: 20px; border: 1px solid #ccc; background: #f9fff9; }
+    label, input, select { display: block; margin-top: 10px; width: 100%; }
+    button { background: green; color: white; padding: 10px; margin-top: 15px; border: none; }
+  </style>
+</head>
+<body>
+  <h2>Organ Donation Registration</h2>
+  <nav>
+         <a href="index.html">Dashboard</a>
+    <a href="emergency-form.html">Emergency</a>
+    <a href="blood-donate.html">Blood Donation</a>
+    <a href="organ-donate.html">Organ Donation</a>
+    <a href="pharmacy.html">Pharmacy</a>
+    <a href="lab-report.html">Lab Reports</a>
+        </nav>
+      </div>
+  <form>
+    <label>Donor Name:</label>
+    <input type="text" required>
+    <label>Organ to Donate:</label>
+    <select>
+      <option>Kidney</option><option>Liver</option><option>Heart</option><option>Eyes</option>
+    </select>
+    <label>Age:</label>
+    <input type="number" min="1">
+    <label>Consent Confirmed?</label>
+    <input type="checkbox"> Yes
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

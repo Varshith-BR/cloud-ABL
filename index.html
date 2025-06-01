@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Hospital Management</title>
+    
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f8fa;
+      }
+      .main-wrapper {
+        display: flex;
+      }
+      .main-sidebar {
+        width: 250px;
+        background-color: #343a40;
+        color: white;
+        height: 100vh;
+        padding: 20px;
+      }
+      .main-sidebar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+      }
+      .main-content-wraper {
+        flex: 1;
+        padding: 20px;
+      }
+      .header-area {
+        background-color: #ffffff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .section-title h2 {
+        margin: 0 0 20px 0;
+      }
+      .welcome-slide {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .single-welcome {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        flex: 1;
+        min-width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .contact-hospital {
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background: #343a40;
+        color: white;
+      }
+      select, button {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .slider, .slide {
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+      .slide img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="main-sidebar">
+        <div class="brand-area">
+          <a href="index.html"><strong>🏥 Quick Hospital</strong></a>
+        </div>
+        <nav>
+         <a href="index.html">Dashboard</a>
+    <a href="emergency-form.html">Emergency</a>
+    <a href="blood-donate.html">Blood Donation</a>
+    <a href="organ-donate.html">Organ Donation</a>
+    <a href="pharmacy.html">Pharmacy</a>
+    <a href="lab-report.html">Lab Reports</a>
+        </nav>
+      </div>
+
+      <div class="main-content-wraper">
+        <header class="header-area">
+          <h1>Welcome to Quick Hospital Management</h1>
+        </header>
+
+        <div class="page-wrape">
+          <div class="welcome-area">
+            <div class="section-title">
+              <h2>Dashboard Stats</h2>
+            </div>
+            <div class="welcome-slide">
+              <div class="single-welcome">
+                <p>Total Doctors</p>
+                <h3>560</h3>
+              </div>
+              <div class="single-welcome">
+                <p>Total Hospitals</p>
+                <h3>220</h3>
+              </div>
+              <div class="single-welcome">
+                <p>Available Beds</p>
+                <h3>2000</h3>
+              </div>
+              <div class="single-welcome">
+                <p>Today’s Operations</p>
+                <h3>25</h3>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="container" id="container1">
+            <h2>Select a District</h2>
+            <form id="districtForm">
+              <label for="district">Select District:</label>
+              <select id="district" name="district">
+                <option value="tumkur">Tumkur</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="mysore">Mysore</option>
+                <option value="dharwad">Dharwad</option>
+                <option value="chitradurga">Chitradurga</option>
+              </select>
+              <br />
+              <button type="submit">Go to Hospital</button>
+            </form>
+          </div>
+
+          <div class="contact-hospital">
+            <h2><u>Contact Us</u></h2>
+            <p>If you need assistance, please feel free to contact us.</p>
+            <ul>
+              <li><strong>Address:</strong> 123 street, Logkalyan office, BH-road, Tumkur, Karnataka</li>
+              <li><strong>Phone:</strong> (123) 456-7890</li>
+              <li><strong>Email:</strong> Logkalyan@helpservice.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          <p>www.logkalyan.com &copy; 2023 Team Yuva_Bharath - All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+  // Go to hospital page on selection
+  document.getElementById("districtForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const selectedDistrict = document.getElementById("district").value;
+    alert("Redirecting to hospital page for " + selectedDistrict + " (simulated deployment).");
+    // window.location.href = selectedDistrict + "_hospitals.html"; // For actual redirect
+  });
+
+  // Alert only for unnecessary clicks
+  document.addEventListener("click", function (e) {
+    const target = e.target;
+
+    const isFormElement = target.closest("form");
+    const isNavLink = target.closest("a");
+    const isButton = target.tagName === "BUTTON" || target.closest("button");
+    const isInput = target.tagName === "INPUT" || target.closest("input") || target.tagName === "SELECT";
+
+    if (!isFormElement && !isNavLink && !isButton && !isInput) {
+      alert("This is a simulated cloud interaction. No backend is connected.");
+    }
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blood Donation</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    h2 { color: crimson; }
+    form { background: #fefefe; padding: 20px; border: 1px solid #ccc; }
+    label, input, select { display: block; width: 100%; margin-top: 10px; }
+    button { margin-top: 15px; background: crimson; color: white; padding: 10px 15px; border: none; }
+  </style>
+</head>
+<body>
+  <h2>Blood Donation Form</h2>
+  <nav>
+         <a href="index.html">Dashboard</a>
+    <a href="emergency-form.html">Emergency</a>
+    <a href="blood-donate.html">Blood Donation</a>
+    <a href="organ-donate.html">Organ Donation</a>
+    <a href="pharmacy.html">Pharmacy</a>
+    <a href="lab-report.html">Lab Reports</a>
+        </nav>
+      </div>
+  <form>
+    <label>Name:</label>
+    <input type="text" required>
+    <label>Blood Group:</label>
+    <select required>
+      <option>A+</option><option>B+</option><option>AB+</option><option>O+</option>
+      <option>A-</option><option>B-</option><option>AB-</option><option>O-</option>
+    </select>
+    <label>Last Donation Date:</label>
+    <input type="date">
+    <label>Contact:</label>
+    <input type="tel">
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
